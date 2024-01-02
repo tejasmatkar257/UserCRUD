@@ -1,0 +1,45 @@
+
+    <div class="container">
+        <h1>Add User</h1>
+        <hr>
+        <form [formGroup]="UserForm" (ngSubmit)="OnSubmit()">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Name</label>
+                    <input class="form-control" formControlName="name">
+                    <div *ngIf="formSubmitted && UserForm.controls['name'].hasError('required')" class="text-danger">Name is required</div>
+                </div>
+                <div class="col">
+                    <label class="form-label">Mobile Number</label>
+                    <input class="form-control" type="number" formControlName="mobileNumber">
+                    <div *ngIf="formSubmitted && UserForm.controls['mobileNumber'].hasError('pattern')" class="text-danger">Invalid mobile number</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+                    <div *ngIf="formSubmitted && UserForm.controls['email'].hasError('email')" class="text-danger">Invalid email address</div>
+                </div>
+                <div class="col">
+                    <label class="form-label">Age</label>
+                    <input type="number" class="form-control" formControlName="age">
+                    <div *ngIf="formSubmitted && UserForm.controls['age'].hasError('min')" class="text-danger">Age must be at least 18</div>
+                </div>
+            </div>
+            <div class="row">
+                <label>Gender :</label>
+                <label>
+                  <input type="radio" name="gender" value="male" formControlName="gender"/> Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="female" formControlName="gender"/> Female
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="other" formControlName="gender"/> Other
+                </label>
+                <div *ngIf="formSubmitted && UserForm.controls['gender'].hasError('required')" class="text-danger">Gender is required</div>
+              </div>
+            <button type="submit" class="btn btn-primary mt-3">Add User</button>
+        </form>
+    </div>

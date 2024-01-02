@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "mobileNumber": "typicode",
+      "email": "adfafa@gmail.com",
+      "age": 23,
+      "gender": "male"
+    },
+    {
+      "name": "Tejas Matkar",
+      "mobileNumber": 8999941294,
+      "email": "tejasmatkar257@gmail.com",
+      "age": 23,
+      "gender": "male",
+      "id": 2
+    }
+  ]
+}

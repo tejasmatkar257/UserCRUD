@@ -1,0 +1,10 @@
+.navbar{
+    background-color: teal;
+}
+body{
+    background-color: #DAFFFB;
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+}
+    
